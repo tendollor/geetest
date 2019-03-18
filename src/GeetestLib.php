@@ -63,7 +63,7 @@ class GeetestLib
 	public function __construct()
 	{
         if ( Config::get('geetest.serverGetKey') ) {
-            $geetest = \App\Components\Captcha::geetestGetKey();
+            $geetest = \App\Components\CaptchaVerify::geetestGetKey();
             $this->captcha_id = $geetest["geetest_id"];
             $this->private_key = $geetest["geetest_key"];
         } else {

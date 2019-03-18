@@ -69,7 +69,7 @@ $this->validate($request, [
 
 3. 配置项：serverGetKey  -  服务器获取GeetestKey
 
-通过调用 Components Captcha 类 geetestGetKey 方法来获取 Geetest值，方便实现由后台配置的KEY 和 ID
+通过调用 Components CaptchaVerify 的 geetestGetKey 方法来获取 Geetest值，方便实现由后台配置的KEY 和 ID
 
 ```php
 <?php
@@ -77,12 +77,12 @@ $this->validate($request, [
 namespace App\Components;
 
 /**
- * Class Captcha
+ * Class CaptchaVerify
  *
  * @package App\Components
  */
 
-Class Captcha 
+Class CaptchaVerify 
 {
     public static function geetestGetKey() 
     {
