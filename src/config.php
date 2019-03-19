@@ -15,13 +15,13 @@ return [
     
     /*
 	|--------------------------------------------------------------------------
-	| Config ServerGetKey
+	| Config server-get-config
 	|--------------------------------------------------------------------------
 	|
-	| Here you can decision whether to get the geetest key from database or not.
+	| Here you can decision whether to get the geetest id & ket from database or not.
 	|
 	*/
-	'serverGetKey' => FALSE,
+	'server-get-config' => FALSE,
 
 	/*
 	|--------------------------------------------------------------------------
