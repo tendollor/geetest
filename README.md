@@ -38,7 +38,7 @@
 | ------------ | ------------ | ------------ | ------------ |
 | width | 按钮宽度  | 单位可以是 px, %, em, rem, pt  | 300px|
 | lang | 语言，极验验证码免费版不支持多国语言  | zh-cn, en, zh-tw, ja, ko, th  | zh-cn  |
-| serverGetKey | 从服务器获取GeetestKEY | True | False          |
+| server-get-config | 从服务器获取GeetestKEY | True | False          |
 | product  | 验证码展示方式  | popup, float  | popup  |
 | geetest_id  | 极验验证码ID  |   |   |
 | geetest_key  | 极验验证码KEY  |   |   |
@@ -67,7 +67,7 @@ $this->validate($request, [
 ]);
 ```
 
-3. 配置项：serverGetKey  -  服务器获取GeetestKey
+3. 配置项：server-get-config  -  服务器获取GeetestKey
 
 通过调用 Components CaptchaVerify 的 geetestGetKey 方法来获取 Geetest值，方便实现由后台配置的KEY 和 ID
 
