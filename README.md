@@ -30,7 +30,7 @@
 	php artisan vendor:publish --provider='Misechow\Geetest\GeetestServiceProvider'
 	```
 	
-4. `.env` 文件增加配置项 `GEETEST_ID` 和 `GEETEST_KEY` 或 通过添加 Component Captcha 来获取 ID 和 KEY
+4. `.env` 文件增加配置项 `GEETEST_ID` 和 `GEETEST_KEY` 或 通过添加 Component CaptchaVerify 来获取 ID 和 KEY
 
 ## 配置项
 
@@ -69,7 +69,7 @@ $this->validate($request, [
 
 3. 配置项：server-get-config  -  服务器获取GeetestKey
 
-通过调用 Components CaptchaVerify 的 geetestGetKey 方法来获取 Geetest值，方便实现由后台配置的KEY 和 ID
+通过调用 Components CaptchaVerify 的 geetestCaptchaGetConfig 方法来获取 Geetest 配置，方便实现由后台配置的KEY 和 ID
 
 ```php
 <?php
@@ -84,7 +84,7 @@ namespace App\Components;
 
 Class CaptchaVerify 
 {
-    public static function geetestGetKey() 
+    public static function geetestCaptchaGetConfig() 
     {
         return [
             "geetest_id" => Helpers::systemConfig()["geetest_id"], // 后台获取 id
