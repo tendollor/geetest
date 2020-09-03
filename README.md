@@ -12,6 +12,8 @@
 
 ## 配置
 
+> Laravel5.5+ 可跳过此步骤
+
 1. config/app.php 注册 ServiceProvider:
 	
 	```php
