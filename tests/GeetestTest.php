@@ -1,9 +1,11 @@
 <?php
 
-use Misechow\Geetest\Geetest;
-use Illuminate\Console\Scheduling\Event;
+namespace ZBrettonYe\Geetest\Tests;
 
-class GeetestTest extends PHPUnit_Framework_TestCase
+use Germey\Geetest\Geetest;
+use PHPUnit\Framework\TestCase;
+
+class GeetestTest extends TestCase
 {
     /**
      * @var string

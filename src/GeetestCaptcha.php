@@ -1,20 +1,20 @@
-<?php namespace Misechow\Geetest;
+<?php
+
+namespace ZBrettonYe\Geetest;
 
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Request;
 
-trait GeetestCaptcha
-{
+trait GeetestCaptcha {
 	/**
 	 * Get geetest.
 	 */
-	public function getGeetest()
-	{
+	public function getGeetest() {
 		$data = [
-			'user_id' => @Auth::user()?@Auth::user()->id:'UnLoginUser',
+			'user_id'     => @Auth::user()? @Auth::user()->id : 'UnLoginUser',
 			'client_type' => 'web',
-			'ip_address' => Request::ip()
+			'ip_address'  => Request::ip()
 		];
 		$status = Geetest::preProcess($data);
 		session()->put('gtserver', $status);

@@ -1,38 +1,45 @@
 {
-  "name": "misechow/geetest",
-  "description": "Geetest Package for Laravel5",
+  "name": "zbrettonye/geetest",
+  "description": "Geetest Package for Laravel",
   "keywords": [
     "Geetest",
-    "Laravel",
-    "Misechow"
+    "Laravel"
   ],
   "license": "MIT",
-  "support": {
-    "email": "misechow@qq.com"
-  },
   "authors": [
     {
-      "name": "MIseChow",
-      "email": "misechow@qq.com"
+      "name": "zbrettonye",
+      "email": "monkeyblacktech97@gmail.com"
     }
   ],
   "require": {
-    "php": ">=5.6.0",
-    "laravel/framework": "5.*"
+    "php": "^7.3",
+    "illuminate/support": "^5.5 || ^6 || ^7",
+    "illuminate/routing": "^5.5 || ^6 || ^7"
   },
   "require-dev": {
-    "phpunit/phpunit": "~4.1",
-    "mockery/mockery": "dev-master"
+    "phpunit/phpunit": "^9.0",
+    "mockery/mockery": "^1.4"
   },
   "autoload": {
     "psr-4": {
-      "Misechow\\Geetest\\": "src/"
+      "ZBrettonYe\\Geetest\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "ZBrettonYe\\Geetest\\Tests\\": "tests"
     }
   },
   "extra": {
-    "branch-alias": {
-      "dev-master": "1.0-dev"
-    }
+    "laravel": {
+            "providers": [
+                "ZBrettonYe\\Geetest\\GeetestServiceProvider"
+            ],
+            "aliases": {
+                "Geetest": "ZBrettonYe\\Geetest\\Geetest"
+            }
+        }
   },
   "minimum-stability": "dev",
   "prefer-stable": true
