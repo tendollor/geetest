@@ -2,8 +2,8 @@
 
 namespace ZBrettonYe\Geetest\Tests;
 
-use Germey\Geetest\Geetest;
 use PHPUnit\Framework\TestCase;
+use ZBrettonYe\Geetest\Geetest;
 
 class GeetestTest extends TestCase
 {
@@ -17,11 +17,11 @@ class GeetestTest extends TestCase
      */
     public function testProcess()
     {
-	    $data = [
-		    'user_id' => $this->user_id,
-		    'client_type' => 'web',
-		    'ip_address' => '127.0.0.1'
-	    ];
+        $data = [
+            'user_id'     => $this->user_id,
+            'client_type' => 'web',
+            'ip_address'  => '127.0.0.1',
+        ];
         Geetest::shouldReceive('preProcess')->once()->with($data)->andReturn();
     }
 
