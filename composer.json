@@ -1,5 +1,5 @@
 {
-  "name": "zbrettonye/geetest",
+  "name": "tendollor/geetest",
   "description": "Geetest Package for Laravel6-8",
   "keywords": [
     "Geetest",
@@ -8,8 +8,8 @@
   "license": "MIT",
   "authors": [
     {
-      "name": "zbrettonye",
-      "email": "monkeyblacktech97@gmail.com"
+      "name": "tendollor",
+      "email": "mk@titanera.com"
     }
   ],
   "require": {
